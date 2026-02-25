@@ -23,9 +23,9 @@ const GarageList = ({ searchParams }) => {
         const mockGarages = [
           {
             id: 1,
-            title: "Secure Downtown Garage",
-            address: "123 Main St",
-            city: "New York",
+            title: "Secure Garage",
+            address: "Hay Mohamadi NR 33",
+            city: "AGADIR",
             size: "medium",
             pricePerDay: 25,
             pricePerHour: 5,
@@ -38,8 +38,8 @@ const GarageList = ({ searchParams }) => {
           {
             id: 2,
             title: "Covered Parking Space",
-            address: "456 Oak Ave",
-            city: "Los Angeles",
+            address: "Hay Salam NR 25",
+            city: "AGAIDR",
             size: "large",
             pricePerDay: 20,
             pricePerHour: 4,
@@ -52,8 +52,8 @@ const GarageList = ({ searchParams }) => {
           {
             id: 3,
             title: "24/7 Security Garage",
-            address: "789 Pine St",
-            city: "Chicago",
+            address: "Marina Agadir",
+            city: "AGADIR",
             size: "small",
             pricePerDay: 30,
             pricePerHour: 6,

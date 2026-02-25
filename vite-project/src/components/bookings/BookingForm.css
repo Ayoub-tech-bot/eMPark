@@ -218,3 +218,30 @@ textarea:focus {
     width: 100%;
   }
 }
+.progress-bar::before {
+  background: linear-gradient(90deg, var(--primary-light), var(--accent), var(--secondary-light));
+}
+
+.step-indicator.active {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(43, 156, 118, 0.1);
+}
+
+.price-preview {
+  background: rgba(244, 197, 66, 0.1);
+  border-left: 4px solid var(--accent);
+}
+
+.total-price {
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.secure-note {
+  color: var(--secondary);
+}
+
+.secure-note span {
+  color: var(--accent);
+}

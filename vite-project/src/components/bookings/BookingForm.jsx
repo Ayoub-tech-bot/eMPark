@@ -173,9 +173,9 @@ const BookingForm = ({ garageId, onBookingComplete }) => {
       {price.total > 0 && (
         <div className="price-preview">
           <h4>Price Breakdown</h4>
-          <p>{price.days} days × ${price.dayRate} = ${price.days * price.dayRate}</p>
-          <p>{price.hours} hours × ${price.hourRate} = ${price.hours * price.hourRate}</p>
-          <p className="total"><strong>Total: ${price.total}</strong></p>
+          <p>{price.days} days × {price.dayRate}DH = {price.days * price.dayRate}DH</p>
+          <p>{price.hours} hours × {price.hourRate}DH = {price.hours * price.hourRate}DH</p>
+          <p className="total"><strong>Total: {price.total}DH</strong></p>
         </div>
       )}
     </div>
@@ -247,7 +247,7 @@ const BookingForm = ({ garageId, onBookingComplete }) => {
         <p><strong>Dates:</strong> {bookingDetails.startDate} to {bookingDetails.endDate}</p>
         <p><strong>Times:</strong> {bookingDetails.startTime} - {bookingDetails.endTime}</p>
         <p><strong>Vehicle:</strong> {bookingDetails.vehicleDetails.make} {bookingDetails.vehicleDetails.model}</p>
-        <p className="total-price"><strong>Total: ${price.total}</strong></p>
+        <p className="total-price"><strong>Total: {price.total}DH</strong></p>
       </div>
 
       {/* Simple payment form - in production, integrate with Stripe/PayPal */}

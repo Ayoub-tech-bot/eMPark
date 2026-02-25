@@ -8,14 +8,14 @@ const HostDashboard = () => {
   const [myGarages, setMyGarages] = useState([
     {
       id: 1,
-      title: 'Downtown Secure Garage',
+      title: 'Tilila Garage',
       bookings: 5,
       earnings: 250,
       rating: 4.8
     },
     {
       id: 2,
-      title: 'Airport Parking Space',
+      title: 'Agadir port Space',
       bookings: 3,
       earnings: 180,
       rating: 4.5
@@ -52,7 +52,7 @@ const HostDashboard = () => {
           <span className="stat-icon">💰</span>
           <div className="stat-info">
             <h3>Total Earnings</h3>
-            <p className="stat-number">$1,250</p>
+            <p className="stat-number">1,250DH</p>
           </div>
         </div>
         <div className="stat-card">
@@ -79,7 +79,7 @@ const HostDashboard = () => {
                 <h3>{garage.title}</h3>
                 <div className="garage-metrics">
                   <span className="metric">📅 {garage.bookings} bookings</span>
-                  <span className="metric">💰 ${garage.earnings} earned</span>
+                  <span className="metric">💰 {garage.earnings}DH earned</span>
                   <span className="metric">⭐ {garage.rating}</span>
                 </div>
               </div>
@@ -111,11 +111,11 @@ const HostDashboard = () => {
               </div>
               <div className="form-row">
                 <div className="form-group">
-                  <label>Price per Day ($)</label>
+                  <label>Price per Day (DH)</label>
                   <input type="number" min="0" />
                 </div>
                 <div className="form-group">
-                  <label>Price per Hour ($)</label>
+                  <label>Price per Hour (DH)</label>
                   <input type="number" min="0" />
                 </div>
               </div>

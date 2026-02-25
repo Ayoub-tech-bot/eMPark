@@ -9,7 +9,7 @@ export const login = async (email, password) => {
       success: true,
       user: {
         id: 1,
-        name: 'John Doe',
+        name: 'Ahmed',
         email: 'user@example.com',
         role: 'renter'
       },
@@ -20,7 +20,7 @@ export const login = async (email, password) => {
       success: true,
       user: {
         id: 2,
-        name: 'Jane Host',
+        name: 'Ayoub Host',
         email: 'host@example.com',
         role: 'host'
       },

@@ -124,7 +124,7 @@ const MyBookings = () => {
                   <span className={`booking-status ${getStatusClass(booking.status)}`}>
                     {booking.status}
                   </span>
-                  <span className="booking-price">${booking.totalPrice}</span>
+                  <span className="booking-price">{booking.totalPrice}DH</span>
                 </div>
               </div>
               

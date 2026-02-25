@@ -124,14 +124,14 @@ const SearchBar = () => {
             <div className="price-range">
               <input
                 type="number"
-                placeholder="Min $"
+                placeholder="Min DH"
                 min="0"
                 className="price-input"
               />
               <span>to</span>
               <input
                 type="number"
-                placeholder="Max $"
+                placeholder="Max DH"
                 min="0"
                 className="price-input"
               />

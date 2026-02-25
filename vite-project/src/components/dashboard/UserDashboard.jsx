@@ -32,7 +32,7 @@ const UserDashboard = () => {
           <span className="stat-icon">💰</span>
           <div className="stat-info">
             <h3>Total Spent</h3>
-            <p className="stat-number">$450</p>
+            <p className="stat-number">450DH</p>
           </div>
         </div>
       </div>

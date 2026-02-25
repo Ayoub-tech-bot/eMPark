@@ -27,10 +27,10 @@ api.interceptors.request.use(
 const MOCK_GARAGES = [
   {
     id: 1,
-    title: 'Secure Downtown Parking',
+    title: 'Secure Garage',
     description: '24/7 secure garage in the heart of downtown',
-    address: '123 Main St',
-    city: 'New York',
+    address: 'Hay Mohamadi NR 33',
+    city: 'AGADIR',
     pricePerDay: 25,
     pricePerHour: 5,
     size: 'medium',
@@ -38,24 +38,24 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.8,
     reviewCount: 124,
-    images: ['https://images.unsplash.com/photo-1590673846749-2e4117e5c8f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'],
+    images: ['/src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 101,
-      name: 'John Doe',
+      name: 'Ahmed',
       rating: 4.9,
       reviews: 45
     },
     reviews: [
       {
         id: 1,
-        userName: 'Alice Johnson',
+        userName: 'Yasmine',
         rating: 5,
         date: '2024-02-15',
         comment: 'Great location, very secure!'
       },
       {
         id: 2,
-        userName: 'Bob Smith',
+        userName: 'Mouad',
         rating: 4,
         date: '2024-02-10',
         comment: 'Clean and convenient.'
@@ -64,10 +64,10 @@ const MOCK_GARAGES = [
   },
   {
     id: 2,
-    title: 'Covered Garage Near Airport',
-    description: 'Perfect for long-term parking near the airport',
-    address: '456 Airport Rd',
-    city: 'Los Angeles',
+    title: 'Covered Parking Space',
+    description: 'Perfect for long-term parking',
+    address: 'Hay Salam NR 25',
+    city: 'Agadir',
     pricePerDay: 20,
     pricePerHour: 4,
     size: 'large',
@@ -75,17 +75,17 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.5,
     reviewCount: 89,
-    images: ['https://images.unsplash.com/photo-1506521781263-d8422e82f27a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'],
+    images: ['src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 102,
-      name: 'Jane Smith',
+      name: 'Omar',
       rating: 4.7,
       reviews: 32
     },
     reviews: [
       {
         id: 3,
-        userName: 'Carol White',
+        userName: 'Salma',
         rating: 5,
         date: '2024-02-12',
         comment: 'Very convenient for airport parking!'
@@ -94,10 +94,10 @@ const MOCK_GARAGES = [
   },
   {
     id: 3,
-    title: 'Residential Garage Space',
+    title: '24/7 Security Garage',
     description: 'Safe and quiet residential area parking',
-    address: '789 Oak Ave',
-    city: 'Chicago',
+    address: 'Marina Agadir',
+    city: 'Agadir',
     pricePerDay: 15,
     pricePerHour: 3,
     size: 'small',
@@ -105,10 +105,10 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.2,
     reviewCount: 45,
-    images: ['https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-4.0.3&auto=format&fit=crop&w=2064&q=80'],
+    images: ['src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 103,
-      name: 'Bob Wilson',
+      name: 'Moahamed',
       rating: 4.5,
       reviews: 18
     },
@@ -193,7 +193,7 @@ export const getUserBookings = async (userId) => {
       {
         id: 1,
         garageId: 1,
-        garageTitle: 'Secure Downtown Parking',
+        garageTitle: 'Secure Garage',
         image: MOCK_GARAGES[0].images[0],
         startDate: '2024-03-15',
         endDate: '2024-03-20',
@@ -203,7 +203,7 @@ export const getUserBookings = async (userId) => {
       {
         id: 2,
         garageId: 2,
-        garageTitle: 'Covered Garage Near Airport',
+        garageTitle: 'Covered Parking Space',
         image: MOCK_GARAGES[1].images[0],
         startDate: '2024-04-01',
         endDate: '2024-04-05',
@@ -213,7 +213,7 @@ export const getUserBookings = async (userId) => {
       {
         id: 3,
         garageId: 3,
-        garageTitle: 'Residential Garage Space',
+        garageTitle: '24/7 Security Garage',
         image: MOCK_GARAGES[2].images[0],
         startDate: '2024-02-01',
         endDate: '2024-02-05',

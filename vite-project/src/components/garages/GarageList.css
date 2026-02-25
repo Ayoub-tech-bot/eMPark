@@ -1,5 +1,8 @@
 .garage-list-container {
   padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .list-header {
@@ -9,120 +12,132 @@
   margin-bottom: 2rem;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 1rem;
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(197, 40, 61, 0.1);
 }
 
 .list-header h2 {
   color: var(--dark);
   font-size: 1.5rem;
+  margin: 0;
 }
 
 .sort-controls {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+  background: var(--light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
 }
 
 .sort-controls label {
-  color: var(--gray);
-  font-weight: 500;
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .sort-controls select {
-  padding: 0.5rem 2rem 0.5rem 1rem;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
   border: 2px solid #e5e7eb;
   border-radius: var(--radius);
   background: white;
   color: var(--dark);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23c5283d'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 0.5rem center;
+  background-position: right 0.8rem center;
   background-size: 1.2rem;
+  min-width: 180px;
+  transition: all 0.3s ease;
+}
+
+.sort-controls select:hover {
+  border-color: var(--primary);
+  box-shadow: 0 2px 8px rgba(197, 40, 61, 0.1);
 }
 
 .sort-controls select:focus {
   outline: none;
-  border-color: var(--primary);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(244, 197, 66, 0.2);
 }
 
+.sort-controls select option {
+  padding: 0.5rem;
+  background: white;
+  color: var(--dark);
+}
+
+.sort-controls select option:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list-header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+  }
+  
+  .list-header h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  
+  .sort-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .sort-controls select {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Rest of your existing GarageList.css styles */
 .garages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  padding: 1rem;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-/* Loading State */
-.loading-container {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.spinner {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid var(--primary);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 1s linear infinite;
-  margin: 0 auto 1rem;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-.loading-container p {
-  color: var(--gray);
-  font-size: 1.1rem;
-}
-
-/* Error State */
-.error-container {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: #fee2e2;
-  border-radius: var(--radius);
-  margin: 2rem 0;
-}
-
-.error-message {
-  color: var(--danger);
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-/* No Results */
+.loading-container,
+.error-container,
 .no-results {
   text-align: center;
   padding: 4rem 2rem;
-  background: #f9fafb;
+  background: white;
   border-radius: var(--radius);
+  margin: 2rem auto;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: var(--shadow);
 }
 
-.no-results p {
-  color: var(--gray);
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.no-results p:first-child {
-  color: var(--dark);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .page-btn {
@@ -139,6 +154,7 @@
 .page-btn:hover:not(:disabled) {
   border-color: var(--primary);
   color: var(--primary);
+  background: rgba(197, 40, 61, 0.05);
 }
 
 .page-btn:disabled {
@@ -151,24 +167,19 @@
   font-weight: 500;
 }
 
-/* Responsive */
+/* Responsive grid */
+@media (max-width: 1024px) {
+  .garages-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
-  .list-header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .sort-controls {
-    width: 100%;
-  }
-  
-  .sort-controls select {
-    flex: 1;
-  }
-  
   .garages-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    max-width: 450px;
   }
   
   .pagination {

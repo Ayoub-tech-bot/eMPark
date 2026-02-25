@@ -16,8 +16,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <span className="logo-icon">🚗</span>
-          GarageReserve
+          <span className="logo-icon"></span>
+          eMPark
         </Link>
 
         <div className="nav-links">

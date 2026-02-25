@@ -1,0 +1,24 @@
+.moroccan-pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.03;
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      var(--primary) 0px, 
+      var(--primary) 2px, 
+      transparent 2px, 
+      transparent 10px
+    ),
+    repeating-linear-gradient(135deg, 
+      var(--secondary) 0px, 
+      var(--secondary) 2px, 
+      transparent 2px, 
+      transparent 10px
+    );
+  background-size: 20px 20px;
+}

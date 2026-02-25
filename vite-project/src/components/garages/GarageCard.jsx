@@ -7,7 +7,7 @@ const GarageCard = ({ garage }) => {
   const navigate = useNavigate();
 
   // Default image if none provided
-  const defaultImage = 'https://via.placeholder.com/300x200?text=Garage';
+  const defaultImage = '/src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg';
   
   // Calculate average rating (mock data for now)
   const rating = garage.rating || 4.5;
@@ -67,10 +67,10 @@ const GarageCard = ({ garage }) => {
         </div>
 
         <div className="garage-price">
-          <span className="price">${garage.pricePerDay}</span>
+          <span className="price">{garage.pricePerDay}DH</span>
           <span className="price-unit">/day</span>
           <span className="separator">|</span>
-          <span className="price">${garage.pricePerHour}</span>
+          <span className="price">{garage.pricePerHour}DH</span>
           <span className="price-unit">/hour</span>
         </div>
 

@@ -142,10 +142,10 @@ const GarageDetails = () => {
           {/* Booking Card - Right Side */}
           <div className="booking-card">
             <div className="price-display">
-              <span className="price">${garage.pricePerDay}</span>
+              <span className="price">{garage.pricePerDay}DH</span>
               <span className="price-unit">/day</span>
               <span className="separator">or</span>
-              <span className="price">${garage.pricePerHour}</span>
+              <span className="price">{garage.pricePerHour}DH</span>
               <span className="price-unit">/hour</span>
             </div>
 

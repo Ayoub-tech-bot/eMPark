@@ -65,7 +65,8 @@ function App() {
               </div>
               
               <div className="features-section">
-                <h2>Why Choose GarageReserve?</h2>
+                <h2>Why Choose eMPark ?</h2>
+                <br></br>
                 <div className="features-grid">
                   <div className="feature-card">
                     <span className="feature-icon">🔒</span>
@@ -92,11 +93,12 @@ function App() {
 
               <div className="cta-section">
                 <h2>Ready to find your spot?</h2>
+                <br></br>
                 {!isAuthenticated && (
                   <div className="cta-buttons">
                     <button className="btn btn-primary" onClick={() => window.location.href = '/register'}>
                       Get Started
-                    </button>
+                    </button>&nbsp;
                     <button className="btn btn-secondary" onClick={() => window.location.href = '/browse'}>
                       Browse Garages
                     </button>
@@ -173,7 +175,7 @@ function App() {
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>GarageReserve</h3>
+            <h3>eMPark</h3>
             <p>Your trusted platform for garage reservations</p>
           </div>
           <div className="footer-section">
@@ -195,7 +197,7 @@ function App() {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 GarageReserve. All rights reserved.</p>
+          <p>&copy; 2024 eMPark. All rights reserved.</p>
         </div>
       </footer>
     </div>

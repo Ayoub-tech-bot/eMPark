@@ -12,7 +12,7 @@ const BookingConfirmation = () => {
     // For now, use mock data
     setBooking({
       id: id,
-      garageTitle: 'Secure Downtown Parking',
+      garageTitle: 'Tilila Parking',
       startDate: '2024-03-15',
       endDate: '2024-03-20',
       totalPrice: 125,
