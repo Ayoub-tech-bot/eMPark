@@ -38,7 +38,7 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.8,
     reviewCount: 124,
-    images: ['/src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
+    images: ['/public/images/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 101,
       name: 'Ahmed',
@@ -75,7 +75,7 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.5,
     reviewCount: 89,
-    images: ['src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
+    images: ['/public/images/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 102,
       name: 'Omar',
@@ -105,7 +105,7 @@ const MOCK_GARAGES = [
     isAvailable: true,
     rating: 4.2,
     reviewCount: 45,
-    images: ['src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
+    images: ['../public/images/hamza-yasri-CKSpHJNR93U-unsplash.jpg'],
     host: {
       id: 103,
       name: 'Moahamed',

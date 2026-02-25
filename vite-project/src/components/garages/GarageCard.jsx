@@ -1,13 +1,14 @@
 // src/components/garages/GarageCard.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { getImageUrl, DEFAULT_GARAGE_IMAGE } from '../../utils/imageUtils';
 import './GarageCard.css';
 
 const GarageCard = ({ garage }) => {
   const navigate = useNavigate();
 
   // Default image if none provided
-  const defaultImage = '/src/assets/hamza-yasri-CKSpHJNR93U-unsplash.jpg';
+  const defaultImage = '../public/images/hamza-yasri-CKSpHJNR93U-unsplash.jpg';
   
   // Calculate average rating (mock data for now)
   const rating = garage.rating || 4.5;
@@ -20,15 +21,19 @@ const GarageCard = ({ garage }) => {
   const handleQuickBook = () => {
     navigate(`/book/${garage.id}`);
   };
+    const imageUrl = garage.images?.[0] 
+    ? getImageUrl(garage.images[0]) 
+    : DEFAULT_GARAGE_IMAGE;
 
   return (
     <div className="garage-card">
       <div className="garage-image">
         <img 
-          src={garage.images?.[0] || defaultImage} 
+          src={imageUrl}
           alt={garage.title}
           onError={(e) => {
-            e.target.src = defaultImage;
+            console.error('Image failed to load:', imageUrl);
+            e.target.src = "/public/images/hamza-yasri-CKSpHJNR93U-unsplash.jpg";
           }}
         />
         {garage.isAvailable ? (
