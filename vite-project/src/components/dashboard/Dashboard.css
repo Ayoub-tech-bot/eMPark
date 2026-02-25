@@ -1,0 +1,388 @@
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  color: var(--dark);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: var(--gray);
+}
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  background: #f3f4f6;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.stat-info h3 {
+  font-size: 0.875rem;
+  color: var(--gray);
+  margin-bottom: 0.25rem;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+.dashboard-section {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.dashboard-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.action-card {
+  background: #f9fafb;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.action-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.action-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.action-card p {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+/* Garages List */
+.garages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.garage-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: var(--radius);
+  transition: background 0.3s;
+}
+
+.garage-item:hover {
+  background: #f3f4f6;
+}
+
+.garage-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.garage-metrics {
+  display: flex;
+  gap: 1rem;
+}
+
+.metric {
+  color: var(--gray);
+  font-size: 0.875rem;
+}
+
+.garage-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* My Bookings */
+.bookings-header {
+  margin-bottom: 1.5rem;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 1rem;
+}
+
+.filter-tab {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  color: var(--gray);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+  border-radius: var(--radius);
+}
+
+.filter-tab:hover {
+  color: var(--primary);
+  background: #f3f4f6;
+}
+
+.filter-tab.active {
+  color: var(--primary);
+  background: #e0e7ff;
+}
+
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.booking-card {
+  display: grid;
+  grid-template-columns: 150px 1fr auto;
+  gap: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: var(--radius);
+  align-items: center;
+}
+
+.booking-image {
+  width: 150px;
+  height: 100px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.booking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.booking-info h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.booking-dates {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+}
+
+.booking-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.booking-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: calc(var(--radius) / 2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-confirmed {
+  background: #d1fae5;
+  color: var(--secondary);
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: var(--warning);
+}
+
+.status-cancelled {
+  background: #fee2e2;
+  color: var(--danger);
+}
+
+.status-completed {
+  background: #e0e7ff;
+  color: var(--primary);
+}
+
+.booking-price {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.booking-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.no-bookings {
+  text-align: center;
+  padding: 3rem;
+  background: #f9fafb;
+  border-radius: var(--radius);
+}
+
+.no-bookings p {
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  color: var(--dark);
+}
+
+.add-garage-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+  
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .booking-card {
+    grid-template-columns: 1fr;
+  }
+  
+  .booking-image {
+    width: 100%;
+    height: 150px;
+  }
+  
+  .garage-item {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .garage-metrics {
+    justify-content: center;
+  }
+  
+  .filter-tabs {
+    flex-wrap: wrap;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
