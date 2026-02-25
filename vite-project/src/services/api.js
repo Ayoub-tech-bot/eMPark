@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Vite uses import.meta.env instead of process.env
 // Make sure to prefix your env variables with VITE_
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://e-m-park.vercel.app/';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
